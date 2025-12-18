@@ -23,13 +23,12 @@ def resolve_video(url: str = Body(..., embed=True)):
     try:
         ydl_opts = {
             'format': 'best',
-            'quiet': True,
-            'no_warnings': True,
-            'skip_download': True,  # We only want metadata & direct links
+            'skip_download': True,
             'youtube_include_dash_manifest': False,
             'http_headers': {
-                'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1',
-                'Accept-Language': 'en-US,en;q=0.9',
+                'User-Agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Mobile Safari/537.36',
+                'Referer': 'https://www.douyin.com/',
+                'Accept-Language': 'zh-CN,zh;q=0.9',
             }
         }
 
